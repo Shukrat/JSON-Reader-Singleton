@@ -86,18 +86,4 @@ public class Helper_JSONReader_Singleton {
 
         return jsonArray;
     }
-
-    // JSONObjects in android already have a call to get an array from
-    // an object. This method lets you pull the arrays a bit more dynamically.
-    public JSONArray getJSONArrayFromJSONObject(JSONObject incomingJSON, String neededArray){
-        JSONArray returnJSON = new JSONArray();
-
-        try{
-            returnJSON = incomingJSON.getJSONArray(neededArray);
-        } catch (JSONException e){
-            e.printStackTrace();
-        }
-
-        return returnJSON;
-    }
 }
